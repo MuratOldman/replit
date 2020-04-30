@@ -6,8 +6,13 @@ public class replit168_Methods_with_String3_cover {
     }
 
     public static String coverString(String main, String coverME) {
-
-      main=main.replaceAll(coverME,"["+coverME+"]");
-      return main;
+        String result="";
+        if (!main.contains(coverME)) {
+            result= "[" + main + "]";
+        } else {
+            main = main.replaceAll(coverME, "[" + coverME + "]");
+            result =main;
+        }
+        return result;
     }
 }
